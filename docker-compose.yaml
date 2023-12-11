@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  temp_humidity:
+    container_name: temp_humidity
+    env_file: .env
+    build:
+      context: .
+      dockerfile: build/Dockerfile
+    privileged: true
+    volumes:
+      - ./worker:/app/worker
+    restart: always

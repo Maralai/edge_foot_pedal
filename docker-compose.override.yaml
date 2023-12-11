@@ -1,0 +1,9 @@
+# Move this file above the plugins folder and run with edge
+# docker-compose -f docker-compose.yaml -f docker-compose.override.yaml up -d --build
+# See Readme for more details.
+version: '3.8'
+services:
+  temp_humidity:
+    extends:
+      file: ./plugins/edge_temp_humidity/docker-compose.yaml
+      service: temp_humidity

@@ -1,0 +1,74 @@
+[
+    {
+        "entities": [
+            {
+                "type": "tower_light",
+                "ha_discovery_topic": "homeassistant/light/{device_id}_{color}/config",
+                "ha_discovery_payload": {
+                    "name": "{color}",
+                    "device_class": "light",
+                    "state_topic": "tower/light/{device_id}_{color}/state",
+                    "command_topic": "tower/light/{device_id}_{color}/set",
+                    "retain": true,
+                    "payload_on": "ON",
+                    "payload_off": "OFF",
+                    "unique_id": "{device_id}_{color}",
+                    "device": {
+                        "identifiers": ["{device_id}"],
+                        "name": "Tower Light/Buzzer ({device_id})",
+                        "sw_version": "1.0.0",
+                        "manufacturer": "n/a",
+                        "model": "TLB2023",
+                        "via_device": ""
+                    }
+                }
+            },
+            {
+                "type": "tower_buzzer",
+                "buzzer_switch": {
+                    "ha_discovery_topic": "homeassistant/switch/{device_id}_BUZZER/config",
+                    "ha_discovery_payload": {
+                        "name": "BUZZER",
+                        "device_class": "switch",
+                        "state_topic": "tower/switch/{device_id}_BUZZER/state",
+                        "command_topic": "tower/switch/{device_id}_BUZZER/set",
+                        "retain": true,
+                        "payload_on": "ON",
+                        "payload_off": "OFF",
+                        "unique_id": "{device_id}_BUZZER",
+                        "device": {
+                            "identifiers": ["{device_id}"],
+                            "name": "Tower Light/Buzzer ({device_id})",
+                            "sw_version": "1.0.0",
+                            "manufacturer": "n/a",
+                            "model": "TLB2023",
+                            "via_device": ""
+                        }
+                    }
+                },
+                "buzzer_profile":{
+                    "ha_discovery_topic": "homeassistant/select/{device_id}_BUZZER/config",
+                    "ha_discovery_payload": {
+                        "name": "BUZZER Profile",
+                        "device_class": "sound",
+                        "state_topic": "tower/select/{device_id}_BUZZER/state",
+                        "command_topic": "tower/select/{device_id}_BUZZER/set",
+                        "options": [],
+                        "retain": true,
+                        "payload_on": "ON",
+                        "payload_off": "OFF",
+                        "unique_id": "{device_id}_BUZZER",
+                        "device": {
+                            "identifiers": ["{device_id}"],
+                            "name": "Tower Light/Buzzer ({device_id})",
+                            "sw_version": "1.0.0",
+                            "manufacturer": "n/a",
+                            "model": "TLB2023",
+                            "via_device": ""
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]
