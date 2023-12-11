@@ -3,7 +3,8 @@
 # See Readme for more details.
 version: '3.8'
 services:
-  temp_humidity:
+  foot_pedal:
     extends:
-      file: ./plugins/edge_temp_humidity/docker-compose.yaml
-      service: temp_humidity
+      file: ./plugins/edge_foot_pedal/docker-compose.yaml
+      service: foot_pedal
+

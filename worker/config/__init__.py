@@ -1,1 +1,1 @@
-from . import humidity, temperature
+from . import switch_sensor

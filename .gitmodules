@@ -1,0 +1,3 @@
+[submodule "worker/core"]
+	path = worker/core
+	url = https://github.com/Maralai/edge_plugin_core
