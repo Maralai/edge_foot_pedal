@@ -7,7 +7,7 @@ configure_logging()
 
 class Worker:
     def __init__(self):
-        self.mqtt = MqttClientWrapper()
+        self.mqtt = MqttClientWrapper(client_id_suffix="foot_pedal")
         self.device_manager = DeviceManager(self.mqtt.client)
         self.setup_mqtt_callbacks()
 
